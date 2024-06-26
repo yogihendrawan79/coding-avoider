@@ -1,1 +1,1 @@
-Ini adalah codingan Avoider beserta Repository-nya
+Ini adalah codingan Avoider beserta Library-nya

@@ -1,17 +1,32 @@
-#include <AFMotor.h>
-#include <NewPing.h>
-#include <Servo.h>
+//Tulis Ulang library di bawah ini
+//#include <AFMotor.h>
+//#include <NewPing.h>
+//#include <Servo.h>
+//Mulai dari bawah sini:
+...
+...
+...
 
 #define TRIG_PIN A4
 #define ECHO_PIN A5
 #define MAX_DISTANCE 200
-#define MAX_SPEED 150 // sets speed of DC  motors
+
+//Tentukan max speednya, dari 0 s/d 255
+#define MAX_SPEED  // sets speed of DC  motors
+
+
 #define MAX_SPEED_OFFSET 20
 
 NewPing sonar(TRIG_PIN, ECHO_PIN, MAX_DISTANCE);
 
-AF_DCMotor motor1(2, MOTOR12_1KHZ);
-AF_DCMotor motor2(3, MOTOR12_1KHZ);
+//Deklarasikan pin motor mana yang dipakai
+//AF_DCMotor motor1(1, MOTOR12_1KHZ); atau AF_DCMotor motor1(2, MOTOR12_1KHZ); <=== Ini untuk motor1
+//AF_DCMotor motor2(3, MOTOR12_1KHZ); atau AF_DCMotor motor2(4, MOTOR12_1KHZ); <=== Ini untuk motor2
+//Mulai dari bawah sini:
+//Motor 1
+...
+//Motor 2
+...
 
 Servo myservo;
 
@@ -20,8 +35,12 @@ int distance = 100;
 int speedSet = 0;
 
 void setup() {
-
-  myservo.attach(9);
+//  Pin Servo mana yang benar?
+//  myservo.attach(9);
+//  atau
+//  myservo.attach(10);
+// Mulai dari bawah sini:
+  ...
   myservo.write(115);
   delay(2000);
   distance = readPing();
